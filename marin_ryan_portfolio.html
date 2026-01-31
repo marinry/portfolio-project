@@ -1,0 +1,399 @@
+<!--
+Name: Ryan Marin
+Student ID: 914338604
+Course: IST 256 – Programming for the Web
+Assignment: HTML5 Personal Portfolio
+Submission Date: January 25, 2026
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ryan Marin | Cybersecurity Student</title>
+
+     <!-- Meta Information -->
+    <meta name="description" content="Personal portfolio of Ryan Marin, a cybersecurity student with interests in penetration testing, networking, and threat analysis.">
+    <meta name="author" content="Ryan Marin">
+    <meta name="keywords" content="Cybersecurity, Networking, HTML5, Portfolio">
+
+    <!-- Internal CSS -->
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        header, footer {
+            background-color: #1f2933;
+            color: #ffffff;
+            padding: 1.5rem;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+        }
+
+        nav a {
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        main {
+            display: flex;
+            gap: 2rem;
+            padding: 2rem;
+        }
+
+        section {
+            margin-bottom: 2rem;
+            background: #ffffff;
+            padding: 1.5rem;
+            border-radius: 6px;
+        }
+
+        aside {
+            background: #ffffff;
+            padding: 1.5rem;
+            border-radius: 6px;
+            max-width: 300px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            border: 1px solid #ccc;
+            padding: 0.75rem;
+            text-align: left;
+        }
+
+        th {
+            background-color: #e5e7eb;
+        }
+
+        figure {
+            margin: 0;
+        }
+
+        figcaption {
+            font-size: 0.9rem;
+            color: #555;
+        }
+
+        form label {
+            display: block;
+            margin-top: 1rem;
+        }
+
+        footer p {
+            margin: 0.5rem 0;
+        }
+
+        header img {
+        border-radius: 50%;
+        border: 3px solid #ffffff;
+        }
+    </style>
+</head>
+
+<body>
+<!-- HEADER  -->
+<header>
+    <h1>Ryan Marin</h1>
+    <figure>
+        <img 
+        src="https://i.imgur.com/ixdphNr.jpeg" 
+        alt="Headshot of Me" 
+        width="150" 
+        height="150">
+        <figcaption>Cybersecurity Student</figcaption>
+    </figure>
+    <p><strong>Exploring vulnerabilities, securing systems, and staying one step ahead.</strong></p>
+
+    <!-- NAVIGATION -->
+    <nav aria-label="Primary Navigation">
+        <ul>
+            <li><a href="#about">About Me</a></li>
+            <li><a href="#education">Education & Coursework</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<!--  MAIN CONTENT  -->
+<main>
+
+    <div>
+        <!--  ABOUT SECTION  -->
+        <section id="about">
+            <h2>About Me</h2>
+
+            <article>
+                <h3>Background</h3>
+                <p>
+                    I am a second-year <abbr title="Information Sciences and Technology">IST</abbr> student studying
+                    <em>Cybersecurity</em> at Penn State Lehigh Valley. My interest lies in penetration testing,
+                    network defense, and understanding how attackers exploit weaknesses in systems.
+                </p>
+
+                <p>
+                    I enjoy the <mark>constant evolution</mark> of cybersecurity, where adaptation is a must.
+                </p>
+            </article>
+
+            <article>
+                <h3>Goals</h3>
+                <p>
+                    My long-term goal is to work in offensive security, specifically in threat analysis.
+                    I want to help organizations strengthen their defenses by thinking like an attacker or being an attacker.
+                </p>
+
+                <p>
+                    I began focusing on cybersecurity seriously in <time datetime="2024-08">August 2024</time>.
+                </p>
+            </article>
+        </section>
+
+        <!-- EDUCATION & COURSEWORK SECTION -->
+        <section id="education">
+            <h2>Education & Coursework</h2>
+
+            <p><strong>Current GPA:</strong> 4.0</p>
+
+            <table>
+                <caption>Relevant Coursework</caption>
+                <thead>
+                    <tr>
+                        <th scope="col">Course Code</th>
+                        <th scope="col">Course Name</th>
+                        <th scope="col">Grade (if applicable)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">CYBER 221</th>
+                        <td>Overview of Information Security</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">IST 256</th>
+                        <td>Programming for the Web</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">SRA 211</th>
+                        <td>Threats of Terror & Crime</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">CYBER 262</th>
+                        <td>Cyber D Studio</td>
+                        <td>A</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">IST 230</th>
+                        <td>Language, Logic, & Discrete Math</td>
+                        <td>A</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">IST 210</th>
+                        <td>Organizational Data</td>
+                        <td>A</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">IST 242</th>
+                        <td>Intermediate Object-Oriented App Dev</td>
+                        <td>A</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">IST 220</th>
+                        <td>Networking & Telecommunications</td>
+                        <td>A</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">SRA 111</th>
+                        <td>Intro to SRA</td>
+                        <td>A</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">CYBER 100</th>
+                        <td>Computer Systems Literacy</td>
+                        <td>A</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">IST 140</th>
+                        <td>Intro to App Development</td>
+                        <td>A</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!--  SKILLS SECTION  -->
+        <section id="skills">
+            <h2>Technical Skills</h2>
+
+            <table>
+                <caption>Cybersecurity Skills and Proficiency Levels</caption>
+                <thead>
+                    <tr>
+                        <th scope="col">Skill</th>
+                        <th scope="col">Description</th>
+                        <th scope="col">Proficiency</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">Networking</th>
+                        <td>OSI Model, TCP/IP, DNS, DHCP</td>
+                        <td>Intermediate</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Linux</th>
+                        <td>Command line navigation and scripting</td>
+                        <td>Intermediate</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">HTML5</th>
+                        <td>Semantic markup and accessibility</td>
+                        <td>Beginner</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <details>
+                <summary>Additional Skills</summary>
+                <ul>
+                    <li>Virtual lab environments</li>
+                    <li>Basic vulnerability analysis</li>
+                    <li>Security documentation</li>
+                </ul>
+            </details>
+        </section>
+
+        <!--  PROJECTS SECTION  -->
+        <section id="projects">
+            <h2>Projects & Experience</h2>
+
+            <article>
+                <h3>Network Security Labs</h3>
+                <p>
+                    Completed multiple simulated labs focusing on network segmentation, firewall placement,
+                    and IDS/IPS integration. These labs emphasized real-world scenarios rather than theory alone.
+                </p>
+
+                <blockquote cite="https://www.schneier.com/essays/archives/1999/10/risks_of_relying_on.html">
+                    "Security is not a product, but a process." – Bruce Schneier
+                </blockquote>
+            </article>
+
+            <article>
+                <h3>HTML Portfolio Project</h3>
+                <p>
+                    Designed and developed this portfolio using HTML5 elements, focusing on an accessible
+                    and clean document. Used elements such as <code>&lt;section&gt;</code>,
+                    <code>&lt;article&gt;</code>, and <code>&lt;aside&gt;</code>.
+                </p>
+
+                <p>
+                    Example formula: H<sub>2</sub>O and x<sup>2</sup> + y<sup>2</sup>
+                </p>
+            </article>
+        </section>
+
+        <!--  CONTACT SECTION  -->
+        <section id="contact">
+            <h2>Contact Me</h2>
+
+            <form action="#" method="post" aria-label="Contact Form">
+                <fieldset>
+                    <legend>Send Me a Message</legend>
+
+                    <label for="name">Full Name:</label>
+                    <input type="text" id="name" name="name" required>
+
+                    <label for="email">Email Address:</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <label for="reason">Reason for Contact:</label>
+                    <select id="reason" name="reason">
+                        <option value="general">General Inquiry</option>
+                        <option value="academic">Academic</option>
+                        <option value="professional">Professional</option>
+                    </select>
+
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" rows="4"></textarea>
+
+                    <button type="submit">Submit</button>
+                </fieldset>
+            </form>
+
+            <p>
+                Email: <a href="mailto:ram7164@psu.edu">ram7164@psu.edu</a><br>
+                Phone: <a href="tel:+14848949904">+1 (484) 894-9904</a>
+            </p>
+
+        </section>
+
+    </div>
+
+    <!--  ASIDE  -->
+    <aside>
+        <h2>Quick Facts</h2>
+        <ul>
+            <li>Soccer enthusiast</li>
+            <li>Enjoys video games</li>
+            <li>Cybersecurity focused</li>
+        </ul>
+
+        <dl>
+            <dt>Favorite OS</dt>
+            <dd>Windows</dd>
+
+            <dt>Preferred Field</dt>
+            <dd>Threat Analysis</dd>
+        </dl>
+
+        <h3>Favorite Snack</h3>
+        <figure>
+            <img src="https://chipabythedozen.com/wp-content/uploads/2020/03/alfajores-dulce-de-leche-sandwhich-cookies-1.jpg"
+                alt="Alfajores, Argentinian dulce de leche cookies"
+                width="200"
+                height="100"
+                loading="lazy"
+                style="border-radius:6px; border:1px solid #ccc;">
+            <figcaption>Alfajores - My favorite Argentinian treat</figcaption>
+        </figure>
+    </aside>
+
+</main>
+
+<!--  FOOTER  -->
+<footer>
+    <p>&copy; 2026 Ryan Marin. All rights reserved.</p>
+    <p>Last updated: <time datetime="2026-01-25">January 25, 2026</time></p>
+
+</footer>
+
+</body>
+</html>
