@@ -2,7 +2,7 @@
 Name: Ryan Marin
 Student ID: 914338604
 Course: IST 256 – Programming for the Web
-Assignment: CSS-Enhanced Portfolio
+Assignment: LIVE Portfolio Page Assignment
 Description: Primary external stylesheet
 
 TABLE OF CONTENTS
@@ -22,7 +22,9 @@ TABLE OF CONTENTS
 14. 
 */
 
-/* 1. Reset & Global Rules */
+/* =====================================================
+1. Reset & Global Rules 
+=====================================================*/
 *,
 *::before,
 *::after {
@@ -49,7 +51,10 @@ img {
     display: block;
 }
 
-/* 2. CSS Custom Properties */
+/* =====================================================
+2. CSS Custom Properties 
+=====================================================*/
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap');
 :root {
     /* Colors */
     --color-primary: #1f2933;
@@ -62,7 +67,7 @@ img {
     --color-danger: #dc2626;
 
     /* Typography */
-    --font-primary: 'Arial', Helvetica, sans-serif;
+    --font-primary: 'Inter', 'Arial', Helvetica, sans-serif;
     --font-mono: 'Courier New', monospace;
     --font-size-xs: 0.75rem;
     --font-size-sm: 0.875rem;
@@ -87,8 +92,11 @@ img {
     --radius-round: 50%;
 }
 
-/* 3. Header & Navigation */ 
+/* =====================================================
+3. Header & Navigation 
+=====================================================*/ 
 header { 
+    text-align: center;
     background-color: var(--font-primary);
     color: #ffffff;
     text-align: center;
@@ -103,6 +111,9 @@ header h1 {
 }
 
 header figure {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     margin: var(--spacing-md) 0;
 }
 
@@ -136,6 +147,10 @@ nav a:hover {
     color: var(--color-accent);
 }
 
+a[target="_blank"] {
+    color: var(--color-accent); text-decoration: underline; 
+}
+
 /* Main layout */
 main {
     display: flex;
@@ -156,7 +171,9 @@ aside {
     box-shadow: 0 2px 6px rgba(0,0,0,0.1);
 }
 
-/* 4. Sections & Cards */
+/* =====================================================
+4. Sections & Cards 
+=====================================================*/
 section {
     background-color: #ffffff;
     padding: var(--spacing-lg);
@@ -195,11 +212,14 @@ section article p {
     color: var(--color-neutral-dark);
 }
 
-/* 5. Tables */
+/* =====================================================
+5. Tables 
+=====================================================*/
 table {
     width: 100%;
     border-collapse: collapse;
     margin-bottom: var(--spacing-lg);
+    overflow: hidden;
 }
 
 caption {
@@ -234,7 +254,10 @@ tbody tr:hover {
     transition: background-color 0.3s ease, color 0.3 ease;
 }
 
-/* 6. Forms */
+/* 
+=====================================================
+6. Forms 
+=====================================================*/
 form {
     background-color: #ffffff;
     padding: var(--spacing-lg);
@@ -292,7 +315,25 @@ form button:hover {
     background-color: var(--color-secondary);
 }
 
-/* 7. Transitions */
+input:valid, 
+textarea:valid { 
+    border-color: var(--color-success); 
+} 
+
+input:invalid, 
+textarea:invalid {
+    border-color: var(--color-danger); 
+}
+
+::placeholder {
+    color: var(--color-secondary);
+    opacity: 0.7;
+}
+
+
+/* =====================================================
+7. Transitions 
+=====================================================*/
 a, 
 button,
 section,
@@ -309,7 +350,9 @@ section:hover {
     box-shadow: 0 6px 14px rgba(0,0,0,0.15);
 }
 
-/* 8. Animations */
+/* =====================================================
+8. Animations 
+=====================================================*/
 @keyframes fadeInUp {
     from {
         opacity: 0;
@@ -320,9 +363,18 @@ section:hover {
         transform: translateY(0);
     }
 }
+@keyframes subtlePulse { 
+    0% { transform: scale(1); } 
+    50% { transform: scale(1.02); } 
+    100% { transform: scale(1); } 
+}
 
 section {
     animation: fadeInUp 0.6s ease forwards;
+}
+
+form button { 
+    animation: subtlePulse 3s ease-in-out infinite; 
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -332,7 +384,9 @@ section {
     }
 }
 
-/* 9. Responsive Design */
+/* =====================================================
+9. Responsive Design
+===================================================== */
 @media (min-width: 768px) {
     main {
         display: grid;
@@ -363,9 +417,9 @@ section {
     }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1400px) {
     main {
-        max-width: 1200px;
+        max-width: 1400px;
         margin: 0 auto;
     }
 }
