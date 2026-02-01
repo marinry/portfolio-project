@@ -14,7 +14,7 @@ TABLE OF CONTENTS
 6. Forms
 7. Transitions
 8. Animations
-9. 
+9. Responsive Design
 10. 
 11. 
 12.
@@ -329,5 +329,43 @@ section {
     * {
         animation: none;
         transition: none;
+    }
+}
+
+/* 9. Responsive Design */
+@media (min-width: 768px) {
+    main {
+        display: grid;
+        grid-template-columns: 3fr 1fr;
+        gap: var(--spacing-lg);
+    }
+
+    aside {
+        align-self: start;
+    }
+
+    nav ul {
+        flex-wrap: nowrap;
+    }
+}
+
+@media (min-width: 1024px) {
+    body {
+        font-size: 1.05rem;
+    }
+
+    header h1 {
+        font-size: 2.5rem;
+    }
+
+    section {
+        padding: var(--spacing-xl);
+    }
+}
+
+@media (min-width: 1200px) {
+    main {
+        max-width: 1200px;
+        margin: 0 auto;
     }
 }
