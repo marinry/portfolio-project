@@ -1,0 +1,50 @@
+/* 
+Name: Ryan Marin
+Student ID: 914338604
+Course: IST 256 – Programming for the Web
+Assignment: CSS-Enhanced Portfolio
+Description: Primary external stylesheet
+
+TABLE OF CONTENTS
+1. Reset & Global Rules
+2. 
+3. 
+4. 
+5. 
+6. 
+7. 
+8. 
+9. 
+10. 
+11. 
+12.
+13.
+14. 
+*/
+
+/* 1. Reset & Global Rules */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 16px;
+}
+
+body {
+    line-height: 1.6;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
