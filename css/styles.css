@@ -10,7 +10,7 @@ TABLE OF CONTENTS
 2. CSS Custom Properties 
 3. Heading & Navigation
 4. Sections & Cards
-5. 
+5. Tables
 6. 
 7. 
 8. 
@@ -193,4 +193,43 @@ section article p {
     font-size: var(--font-size-sm);
     line-height: 1.5;
     color: var(--color-neutral-dark);
+}
+
+/* 5. Tables */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: var(--spacing-lg);
+}
+
+caption {
+    caption-side: top;
+    font-weight: var(--font-weight-bold);
+    font-size: var(--font-size-md);
+    margin-bottom: var(--spacing-sm);
+    text-align: left;
+    color: var(--color-primary);
+}
+
+th, td {
+    border: 1px solid #ccc;
+    padding: var(--spacing-sm);
+    text-align: left;
+    font-size: var(--font-size-sm);
+}
+
+th {
+    background-color: var(--color-neutral-light);
+    font-weight: var(--font-weight-bold);
+    color: var(--color-neutral-dark);
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+tbody tr:hover {
+    background-color: var(--color-accent);
+    color: #ffffff;
+    transition: background-color 0.3s ease, color 0.3 ease;
 }
