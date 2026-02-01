@@ -15,11 +15,6 @@ TABLE OF CONTENTS
 7. Transitions
 8. Animations
 9. Responsive Design
-10. 
-11. 
-12.
-13.
-14. 
 */
 
 /* =====================================================
@@ -48,8 +43,6 @@ body {
     color: var(--color-neutral-dark);
 }
 
-
-
 img {
     max-width: 100%;
     height: auto;
@@ -67,13 +60,6 @@ img {
     --color-accent: #d97706;  
     --color-neutral-light: #f8f3ec; 
     --color-neutral-dark: #2c1b0e; 
-
-    /*--color-primary: #1f2933;
-    --color-secondary: #4b5563;
-    --color-accent: #3b82f6;
-    --color-neutral-light: #f4f4f4;
-    --color-neutral-dark: #111827;*/
-
     --color-success: #16a34a;
     --color-warning: #f59e0b;
     --color-danger: #dc2626;
@@ -132,6 +118,12 @@ header figure {
 header img {
     border-radius: var(--radius-round);
     border: 3px solid #ffffff;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+header img:hover {
+    box-shadow: 0 8px 20px rgba(217, 119, 6, 0.9);
+    transform: translateY(-3px);
 }
 
 header figcaption {
