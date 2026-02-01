@@ -445,7 +445,9 @@ form button {
 }
 @media (max-width: 768px) { 
     nav ul {
+        flex-wrap: wrap;
         font-size: 1em; 
+        gap: 8px;
     } 
 }
 
