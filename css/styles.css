@@ -419,16 +419,7 @@ form button {
     }
 
     nav ul {
-        flex-direction: column;
-        gap: 8px;
-        padding: 0;
-    }
-
-    nav a {
-        display: block;
-        text-align: center;
-        padding: 10px 12px;
-        font-size: 0.95rem;
+        flex-wrap: nowrap;
     }
 }
 
@@ -451,5 +442,10 @@ form button {
         max-width: 1400px;
         margin: 0 auto;
     }
+}
+@media (max-width: 768px) { 
+    nav ul {
+        font-size: 1em; 
+    } 
 }
 
