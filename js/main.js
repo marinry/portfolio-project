@@ -6,33 +6,57 @@ function toggleSection(id) {
     section.style.display = section.style.display === "none" ? "block" : "none";
 }
 
-document.querySelectorAll(".toggleBtn").forEach(btn => {
+document.querySelectorAll(".section-toggle").forEach(btn => {
     btn.addEventListener("click", () => {
-        const target = btn.getAttribute("dt");
-        toggleSection(target);
+        const target = btn.getAttribute("data-target");
+        const section = document.getElementById(target);
+        const icon = btn.querySelector(".icon");
+        const isHidden = section.style.display === "none";
+        section.style.display = isHidden ? "block" : "none";
+        icon.textContent = isHidden ? "−" : "+";
     });
 });
 
 // ===============================
 // WHITE MODE
 // ===============================
+let whiteMode = false;
+
 document.getElementById("whiteModeBtn").addEventListener("click", () => {
-    document.body.style.background = "#ffffff";
-    document.body.style.color = "#000000";
+    whiteMode = !whiteMode;
+
+    if (whiteMode) {
+        document.documentElement.style.setProperty("--color-primary", "#ffffff");
+        document.documentElement.style.setProperty("--color-secondary", "#e5e5e5");
+        document.documentElement.style.setProperty("--color-accent", "#cccccc");
+
+        document.body.style.background = "#ffffff";
+        document.body.style.color = "#000000";
+
+        document.querySelectorAll(".section-toggle").forEach(btn => {
+            btn.style.backgroundColor = "#dddddd";
+            btn.style.color = "#000000";
+        });
+
+    } else {
+        document.documentElement.style.setProperty("--color-primary", "#4a2f1b");
+        document.documentElement.style.setProperty("--color-secondary", "#8b5e34");
+        document.documentElement.style.setProperty("--color-accent", "#d97706");
+
+        document.body.style.background = "linear-gradient(180deg, #f8f3ec 0%, #f1e4d3 40%, #ebd2a8 100%)";
+        document.body.style.color = "var(--color-neutral-dark)";
+
+        document.querySelectorAll(".section-toggle").forEach(btn => {
+            btn.style.backgroundColor = "#8b5e34";
+            btn.style.color = "#ffffff";
+        });
+    }
 });
 
 // ===============================
 // COLOR PICKER MODE
 // ===============================
 const colorPicker = document.getElementById("colorPicker");
-
-document.getElementById("colorModeBtn").addEventListener("click", () => {
-    colorPicker.click();
-});
-
-colorPicker.addEventListener("input", (e) => {
-    document.documentElement.style.setProperty("--color-primary", e.target.value);
-});
 
 // ===============================
 // PAINT MODE
@@ -41,27 +65,29 @@ let paintMode = false;
 let eraserMode = false;
 let selectedColor = "#ff0000";
 
-document.getElementById("paintModeBtn").addEventListener("click", () => {
-    paintMode = true;
-    eraserMode = false;
-});
-
 document.getElementById("eraserModeBtn").addEventListener("click", () => {
     paintMode = false;
     eraserMode = true;
 });
 
-document.addEventListener("click", (e) => {
-    if (!paintMode) return;
+document.getElementById("paintModeBtn").addEventListener("click", () => {
+    paintMode = true;
+    eraserMode = false;
 
     const blob = document.createElement("div");
     blob.classList.add("paint-blob");
-    blob.style.backgroundColor = selectedColor;
-    blob.style.left = e.pageX + "px";
-    blob.style.top = e.pageY + "px";
+
+    const randomX = Math.random() * window.innerWidth;
+    const randomY = Math.random() * window.innerHeight;
+
+    blob.style.left = randomX + "px";
+    blob.style.top = randomY + "px";
+    const randomColor = "#" + Math.floor(Math.random() * 16777215).toString(16);
+    blob.style.setProperty("--blobColor", randomColor);
 
     document.body.appendChild(blob);
 });
+
 
 // ===============================
 // ERASER MODE
@@ -71,6 +97,22 @@ document.addEventListener("mouseover", (e) => {
         e.target.remove();
     }
 });
+
+// ===============================
+// COLOR OPTIONS
+// ===============================
+document.getElementById("colorModeBtn").addEventListener("click", () => {
+    const box = document.getElementById("colorOptions");
+    box.style.display = box.style.display === "none" ? "block" : "none";
+});
+
+document.querySelectorAll(".colorChoice").forEach(btn => {
+    btn.addEventListener("click", () => {
+        const color = btn.getAttribute("data-color");
+        document.documentElement.style.setProperty("--color-primary", color);
+    });
+});
+
 
 // ===============================
 // SPOTIFY PLAYLIST TOGGLE

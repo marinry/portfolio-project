@@ -33,14 +33,6 @@ Submission Date: February 1, 2026
             color: #333;
         }
 
-        header,
-        footer {
-            background-color: #4a2f1b;
-            color: #ffffff;
-            padding: 1.5rem;
-            text-align: center;
-        }
-
         nav ul {
             list-style: none;
             padding: 0;
@@ -133,19 +125,27 @@ Submission Date: February 1, 2026
 
         <!-- NAVIGATION -->
         <nav aria-label="Primary Navigation">
-            <div id="controls" style="margin-top: 1rem;">
+            <div id="controls">
                 <button id="whiteModeBtn">White Mode</button>
                 <button id="colorModeBtn">Color Picker</button>
                 <input type="color" id="colorPicker" style="display:none;">
+                <div id="colorOptions" style="display:none; margin-top:6px;">
+                    <button class="colorChoice" data-color="#d97706"
+                        style="background:#d97706; width:25px; height:25px; border-radius:4px;"></button>
+                    <button class="colorChoice" data-color="#8b5e34"
+                        style="background:#8b5e34; width:25px; height:25px; border-radius:4px;"></button>
+                    <button class="colorChoice" data-color="#4a2f1b"
+                        style="background:#4a2f1b; width:25px; height:25px; border-radius:4px;"></button>
+                    <button class="colorChoice" data-color="#b45309"
+                        style="background:#b45309; width:25px; height:25px; border-radius:4px;"></button>
+                    <button class="colorChoice" data-color="#92400e"
+                        style="background:#92400e; width:25px; height:25px; border-radius:4px;"></button>
+                </div>
+
                 <button id="paintModeBtn">Paint Mode</button>
                 <button id="eraserModeBtn">Eraser Mode</button>
                 <button id="togglePlaylistBtn">Toggle Playlist</button>
                 <button id="toggleVisualizerBtn">Toggle Visualizer</button>
-                <button class="toggleBtn" dt="about">Toggle About</button>
-                <button class="toggleBtn" dt="education">Toggle Education</button> 
-                <button class="toggleBtn" dt="skills">Toggle Skills</button> 
-                <button class="toggleBtn" dt="projects">Toggle Projects</button> 
-                <button class="toggleBtn" dt="contact">Toggle Contact</button>
             </div>
             <ul>
                 <li><a href="#about">About Me</a></li>
@@ -161,8 +161,12 @@ Submission Date: February 1, 2026
     <main>
 
         <div>
+            <button class="section-toggle" data-target="about">
+                <span class="icon">−</span> About
+            </button>
             <!--  ABOUT SECTION  -->
             <section id="about">
+
                 <h2>About Me</h2>
 
                 <article>
@@ -191,9 +195,12 @@ Submission Date: February 1, 2026
                     </p>
                 </article>
             </section>
-
+            <button class="section-toggle" data-target="education">
+                <span class="icon">−</span> Education
+            </button>
             <!-- EDUCATION & COURSEWORK SECTION -->
             <section id="education">
+
                 <h2>Education & Coursework</h2>
 
                 <p><strong>Current GPA:</strong> 4.0</p>
@@ -266,9 +273,12 @@ Submission Date: February 1, 2026
                     </tbody>
                 </table>
             </section>
-
+            <button class="section-toggle" data-target="skills">
+                <span class="icon">−</span> Skills
+            </button>
             <!--  SKILLS SECTION  -->
             <section id="skills">
+
                 <h2>Technical Skills</h2>
 
                 <table>
@@ -308,9 +318,12 @@ Submission Date: February 1, 2026
                     </ul>
                 </details>
             </section>
-
+            <button class="section-toggle" data-target="projects">
+                <span class="icon">−</span> Projects
+            </button>
             <!--  PROJECTS SECTION  -->
             <section id="projects">
+
                 <h2>Projects & Experience</h2>
 
                 <article>
@@ -338,9 +351,12 @@ Submission Date: February 1, 2026
                     </p>
                 </article>
             </section>
-
+            <button class="section-toggle" data-target="contact">
+                <span class="icon">−</span> Contact
+            </button>
             <!--  CONTACT SECTION  -->
             <section id="contact">
+
                 <h2>Contact Me</h2>
 
                 <form action="#" method="post" aria-label="Contact Form">
@@ -406,7 +422,7 @@ Submission Date: February 1, 2026
         <div id="playlistContainer" style="display:none; margin-top:20px;">
             <iframe data-testid="embed-iframe" style="border-radius:12px"
                 src="https://open.spotify.com/embed/playlist/5E6vwq3vdPZtNoqa3gVkx9?utm_source=generator" width="100%"
-                height="352" frameBorder="0" allowfullscreen=""
+                height="180" frameBorder="0" allowfullscreen=""
                 allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy">
             </iframe>
         </div>

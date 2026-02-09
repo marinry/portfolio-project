@@ -16,6 +16,7 @@ TABLE OF CONTENTS
 8. Animations
 9. Responsive Design
 10. Paint and Visualizer
+11. Buttons
 */
 
 /* =====================================================
@@ -54,13 +55,14 @@ img {
 2. CSS Custom Properties 
 =====================================================*/
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap');
+
 :root {
     /* Colors */
-    --color-primary: #4a2f1b; 
-    --color-secondary: #8b5e34; 
-    --color-accent: #d97706;  
-    --color-neutral-light: #f8f3ec; 
-    --color-neutral-dark: #2c1b0e; 
+    --color-primary: #4a2f1b;
+    --color-secondary: #8b5e34;
+    --color-accent: #d97706;
+    --color-neutral-light: #f8f3ec;
+    --color-neutral-dark: #2c1b0e;
     --color-success: #16a34a;
     --color-warning: #f59e0b;
     --color-danger: #dc2626;
@@ -84,7 +86,7 @@ img {
     --spacing-lg: 24px;
     --spacing-xl: 32px;
 
-     /* Border Radius */
+    /* Border Radius */
     --radius-sm: 4px;
     --radius-md: 6px;
     --radius-lg: 12px;
@@ -93,8 +95,8 @@ img {
 
 /* =====================================================
 3. Header & Navigation 
-=====================================================*/ 
-header { 
+=====================================================*/
+header {
     text-align: center;
     background-color: var(--color-primary);
     color: #ffffff;
@@ -169,7 +171,8 @@ nav a:hover {
 }
 
 a[target="_blank"] {
-    color: var(--color-accent); text-decoration: underline; 
+    color: var(--color-accent);
+    text-decoration: underline;
 }
 
 /* Main layout */
@@ -180,7 +183,7 @@ main {
     padding: var(--spacing-lg);
 }
 
-main > div {
+main>div {
     flex: 1 1 65%;
 }
 
@@ -189,7 +192,7 @@ aside {
     background: var(--color-neutral-light);
     padding: var(--spacing-md);
     border-radius: var(--radius-md);
-    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
 /* =====================================================
@@ -252,7 +255,8 @@ caption {
     color: var(--color-primary);
 }
 
-th, td {
+th,
+td {
     border: 1px solid #ccc;
     padding: var(--spacing-sm);
     text-align: left;
@@ -283,7 +287,7 @@ form {
     background-color: #ffffff;
     padding: var(--spacing-lg);
     border-radius: var(--radius-md);
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 form fieldset {
@@ -304,7 +308,7 @@ form label {
     font-weight: var(--font-weight-bold);
     margin-bottom: var(--spacing-xs);
     margin-top: var(--spacing-sm);
-    color:var(--color-neutral-dark);
+    color: var(--color-neutral-dark);
 }
 
 form input,
@@ -336,14 +340,14 @@ form button:hover {
     background-color: var(--color-secondary);
 }
 
-input:valid, 
-textarea:valid { 
-    border-color: var(--color-success); 
-} 
+input:valid,
+textarea:valid {
+    border-color: var(--color-success);
+}
 
-input:invalid, 
+input:invalid,
 textarea:invalid {
-    border-color: var(--color-danger); 
+    border-color: var(--color-danger);
 }
 
 ::placeholder {
@@ -355,7 +359,7 @@ textarea:invalid {
 /* =====================================================
 7. Transitions 
 =====================================================*/
-a, 
+a,
 button,
 section,
 article {
@@ -368,7 +372,7 @@ a:hover {
 
 section:hover {
     transform: translateY(-3px);
-    box-shadow: 0 6px 14px rgba(0,0,0,0.15);
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
 }
 
 /* =====================================================
@@ -379,23 +383,33 @@ section:hover {
         opacity: 0;
         transform: translateY(15px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
     }
 }
-@keyframes subtlePulse { 
-    0% { transform: scale(1); } 
-    50% { transform: scale(1.02); } 
-    100% { transform: scale(1); } 
+
+@keyframes subtlePulse {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.02);
+    }
+
+    100% {
+        transform: scale(1);
+    }
 }
 
 section {
     animation: fadeInUp 0.6s ease forwards;
 }
 
-form button { 
-    animation: subtlePulse 3s ease-in-out infinite; 
+form button {
+    animation: subtlePulse 3s ease-in-out infinite;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -444,27 +458,84 @@ form button {
         margin: 0 auto;
     }
 }
-@media (max-width: 768px) { 
+
+@media (max-width: 768px) {
     nav ul {
         flex-wrap: wrap;
-        font-size: 1em; 
+        font-size: 1em;
         gap: 8px;
-    } 
+    }
 }
+
 /* =====================================================
 10. Paint and Visualizer
 =====================================================*/
 .paint-blob {
     position: absolute;
-    width: 25px;
-    height: 25px; 
+    width: 220px;
+    height: 220px;
+    background: radial-gradient(circle, var(--blobColor) 0%, transparent 70%);
     border-radius: 50%;
+    filter: blur(2px);
+    z-index: 5;
     pointer-events: auto;
+
+    clip-path: polygon(48% 4%, 60% 10%, 78% 18%, 90% 32%,
+     96% 50%, 88% 66%, 74% 80%, 58% 90%, 42% 96%, 28% 90%,
+      16% 78%, 8% 62%, 6% 46%, 10% 30%, 20% 18%, 34% 10%);
 }
 
-.visualizer-bar {
-    width: 10px;
-    background-color: var(--color-accent);
-    transform: height 0.2s ease;
-}
+    .visualizer-bar {
+        width: 10px;
+        background-color: var(--color-accent);
+        transform: height 0.2s ease;
+    }
 
+    /* =====================================================
+11. Buttons
+=====================================================*/
+    #controls {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        background: rgba(255, 255, 255, 0.8);
+        padding: 10px;
+        border-radius: 8px;
+        backdrop-filter: blur(6px);
+        z-index: 999;
+    }
+
+    #controls button {
+        background-color: #8b5e34;
+        color: white;
+        border: none;
+        padding: 8px 14px;
+        border-radius: 6px;
+        cursor: pointer;
+        font-weight: bold;
+        margin: 4px;
+        transition: background-color 0.2s ease, transform 0.2s ease;
+    }
+
+    #controls button:hover {
+        background-color: #4a2f1b;
+        transform: translateY(-2px);
+    }
+
+    .section-toggle {
+        background-color: #8b5e34;
+        color: white;
+        border: none;
+        padding: 6px 10px;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 0.9rem;
+        margin-bottom: 10px;
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+    }
+
+    .section-toggle:hover {
+        background-color: #4a2f1b;
+    }
