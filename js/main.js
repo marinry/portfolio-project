@@ -52,7 +52,7 @@ document.getElementById("eraserModeBtn").addEventListener("click", () => {
 });
 
 document.addEventListener("click", (e) => {
-    if(!paintMode) return;
+    if (!paintMode) return;
 
     const blob = document.createElement("div");
     blob.classList.add("paint-blob");
@@ -62,3 +62,50 @@ document.addEventListener("click", (e) => {
 
     document.body.appendChild(blob);
 });
+
+// ===============================
+// ERASER MODE
+// ===============================
+document.addEventListener("mouseover", (e) => {
+    if (eraserMode && e.target.classList.contains("paint-blob")) {
+        e.target.remove();
+    }
+});
+
+// ===============================
+// SPOTIFY PLAYLIST TOGGLE
+// ===============================
+document.getElementById("togglePlaylistBtn").addEventListener("click", () => {
+    const box = document.getElementById("playlistContainer");
+    box.style.display = box.style.display === "none" ? "block" : "none";
+});
+
+// ===============================
+// VISUALIZER
+// ===============================
+const visualizer = document.getElementById("visualizer");
+
+document.getElementById("toggleVisualizerBtn").addEventListener("click", () => {
+    if (visualizer.style.display === "none") {
+        visualizer.style.display = "flex";
+        startVisualizer();
+    } else {
+        visualizer.style.display = "none";
+    }
+});
+
+function startVisualizer() {
+    visualizer.innerHTML = "";
+
+    for (let i = 0; i < 20; i++) {
+        const bar = document.createElement("div");
+        bar.classList.add("visualizer-bar");
+        visualizer.appendChild(bar);
+    }
+
+    setInterval(() => {
+        document.querySelectorAll(".visualizer-bar").forEach(bar => {
+            bar.style.height = Math.random() * 100 + "px";
+        });
+    }, 200);
+}
