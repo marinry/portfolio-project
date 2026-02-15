@@ -159,242 +159,245 @@ Submission Date: February 15, 2026
     </header>
 
     <!--  MAIN CONTENT  -->
-    <main>
+    <main class="container">
+        <div class="row">
+            <div class="col-md-15">
+                <button class="section-toggle" data-target="about">
+                    <span class="icon">−</span> About
+                </button>
+                <!--  ABOUT SECTION  -->
+                <section id="about">
 
-        <div>
-            <button class="section-toggle" data-target="about">
-                <span class="icon">−</span> About
-            </button>
-            <!--  ABOUT SECTION  -->
-            <section id="about">
+                    <h2>About Me</h2>
 
-                <h2>About Me</h2>
+                    <article>
+                        <h3>Background</h3>
+                        <p>
+                            I am a second-year <abbr title="Information Sciences and Technology">IST</abbr> student
+                            studying
+                            <em>Cybersecurity</em> at Penn State Lehigh Valley. My interest lies in penetration testing,
+                            network defense, and understanding how attackers exploit weaknesses in systems.
+                        </p>
 
-                <article>
-                    <h3>Background</h3>
+                        <p>
+                            I enjoy the <mark>constant evolution</mark> of cybersecurity, where adaptation is a must.
+                        </p>
+                    </article>
+
+                    <article>
+                        <h3>Goals</h3>
+                        <p>
+                            My long-term goal is to work in offensive security, specifically in threat analysis.
+                            I want to help organizations strengthen their defenses by thinking like an attacker or being
+                            an
+                            attacker.
+                        </p>
+
+                        <p>
+                            I began focusing on cybersecurity seriously in <time datetime="2024-08">August 2024</time>.
+                        </p>
+                    </article>
+                </section>
+                <button class="section-toggle" data-target="education">
+                    <span class="icon">−</span> Education
+                </button>
+                <!-- EDUCATION & COURSEWORK SECTION -->
+                <section id="education">
+
+                    <h2>Education & Coursework</h2>
+
+                    <p><strong>Current GPA:</strong> 4.0</p>
+
+                    <table class="table table-striped table-bordered table-hover">
+                        <caption>Relevant Coursework</caption>
+                        <thead>
+                            <tr>
+                                <th scope="col">Course Code</th>
+                                <th scope="col">Course Name</th>
+                                <th scope="col">Grade (if applicable)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">CYBER 221</th>
+                                <td>Overview of Information Security</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">IST 256</th>
+                                <td>Programming for the Web</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">SRA 211</th>
+                                <td>Threats of Terror & Crime</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">CYBER 262</th>
+                                <td>Cyber D Studio</td>
+                                <td>A</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">IST 230</th>
+                                <td>Language, Logic, & Discrete Math</td>
+                                <td>A</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">IST 210</th>
+                                <td>Organizational Data</td>
+                                <td>A</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">IST 242</th>
+                                <td>Intermediate Object-Oriented App Dev</td>
+                                <td>A</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">IST 220</th>
+                                <td>Networking & Telecommunications</td>
+                                <td>A</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">SRA 111</th>
+                                <td>Intro to SRA</td>
+                                <td>A</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">CYBER 100</th>
+                                <td>Computer Systems Literacy</td>
+                                <td>A</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">IST 140</th>
+                                <td>Intro to App Development</td>
+                                <td>A</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+                <button class="section-toggle" data-target="skills">
+                    <span class="icon">−</span> Skills
+                </button>
+                <!--  SKILLS SECTION  -->
+                <section id="skills">
+
+                    <h2>Technical Skills</h2>
+
+                    <table>
+                        <caption>Cybersecurity Skills and Proficiency Levels</caption>
+                        <thead>
+                            <tr>
+                                <th scope="col">Skill</th>
+                                <th scope="col">Description</th>
+                                <th scope="col">Proficiency</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">Networking</th>
+                                <td>OSI Model, TCP/IP, DNS, DHCP</td>
+                                <td>Intermediate</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Linux</th>
+                                <td>Command line navigation and scripting</td>
+                                <td>Intermediate</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">HTML5</th>
+                                <td>Semantic markup and accessibility</td>
+                                <td>Beginner</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <details>
+                        <summary>Additional Skills</summary>
+                        <ul>
+                            <li>Virtual lab environments</li>
+                            <li>Basic vulnerability analysis</li>
+                            <li>Security documentation</li>
+                        </ul>
+                    </details>
+                </section>
+                <button class="section-toggle" data-target="projects">
+                    <span class="icon">−</span> Projects
+                </button>
+                <!--  PROJECTS SECTION  -->
+                <section id="projects">
+
+                    <h2>Projects & Experience</h2>
+
+                    <article>
+                        <h3>Network Security Labs</h3>
+                        <p>
+                            Completed multiple simulated labs focusing on network segmentation, firewall placement,
+                            and IDS/IPS integration. These labs emphasized real-world scenarios rather than theory
+                            alone.
+                        </p>
+
+                        <blockquote cite="https://www.schneier.com/essays/archives/1999/10/risks_of_relying_on.html">
+                            "Security is not a product, but a process." – Bruce Schneier
+                        </blockquote>
+                    </article>
+
+                    <article>
+                        <h3>HTML Portfolio Project</h3>
+                        <p>
+                            Designed and developed this portfolio using HTML5 elements, focusing on an accessible
+                            and clean document. Used elements such as <code>&lt;section&gt;</code>,
+                            <code>&lt;article&gt;</code>, and <code>&lt;aside&gt;</code>.
+                        </p>
+
+                        <p>
+                            Example formula: H<sub>2</sub>O and x<sup>2</sup> + y<sup>2</sup>
+                        </p>
+                    </article>
+                </section>
+                <button class="section-toggle" data-target="contact">
+                    <span class="icon">−</span> Contact
+                </button>
+                <!--  CONTACT SECTION  -->
+                <section id="contact">
+
+                    <h2>Contact Me</h2>
+
+                    <form action="#" method="post" aria-label="Contact Form">
+                        <fieldset>
+                            <legend>Send Me a Message</legend>
+
+                            <label for="name">Full Name:</label>
+                            <input type="text" id="name" name="name" required>
+
+                            <label for="email">Email Address:</label>
+                            <input type="email" id="email" name="email" required>
+
+                            <label for="reason">Reason for Contact:</label>
+                            <select id="reason" name="reason">
+                                <option value="general">General Inquiry</option>
+                                <option value="academic">Academic</option>
+                                <option value="professional">Professional</option>
+                            </select>
+
+                            <label for="message">Message:</label>
+                            <textarea id="message" name="message" rows="4"></textarea>
+
+                            <button type="submit">Submit</button>
+                        </fieldset>
+                    </form>
+
                     <p>
-                        I am a second-year <abbr title="Information Sciences and Technology">IST</abbr> student studying
-                        <em>Cybersecurity</em> at Penn State Lehigh Valley. My interest lies in penetration testing,
-                        network defense, and understanding how attackers exploit weaknesses in systems.
+                        Email: <a href="mailto:ram7164@psu.edu">ram7164@psu.edu</a><br>
+                        Phone: <a href="tel:+14848949904">+1 (484) 894-9904</a>
                     </p>
 
-                    <p>
-                        I enjoy the <mark>constant evolution</mark> of cybersecurity, where adaptation is a must.
-                    </p>
-                </article>
+                </section>
 
-                <article>
-                    <h3>Goals</h3>
-                    <p>
-                        My long-term goal is to work in offensive security, specifically in threat analysis.
-                        I want to help organizations strengthen their defenses by thinking like an attacker or being an
-                        attacker.
-                    </p>
-
-                    <p>
-                        I began focusing on cybersecurity seriously in <time datetime="2024-08">August 2024</time>.
-                    </p>
-                </article>
-            </section>
-            <button class="section-toggle" data-target="education">
-                <span class="icon">−</span> Education
-            </button>
-            <!-- EDUCATION & COURSEWORK SECTION -->
-            <section id="education">
-
-                <h2>Education & Coursework</h2>
-
-                <p><strong>Current GPA:</strong> 4.0</p>
-
-                <table class="table table-striped table-bordered table-hover">
-                    <caption>Relevant Coursework</caption>
-                    <thead>
-                        <tr>
-                            <th scope="col">Course Code</th>
-                            <th scope="col">Course Name</th>
-                            <th scope="col">Grade (if applicable)</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <th scope="row">CYBER 221</th>
-                            <td>Overview of Information Security</td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <th scope="row">IST 256</th>
-                            <td>Programming for the Web</td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <th scope="row">SRA 211</th>
-                            <td>Threats of Terror & Crime</td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <th scope="row">CYBER 262</th>
-                            <td>Cyber D Studio</td>
-                            <td>A</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">IST 230</th>
-                            <td>Language, Logic, & Discrete Math</td>
-                            <td>A</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">IST 210</th>
-                            <td>Organizational Data</td>
-                            <td>A</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">IST 242</th>
-                            <td>Intermediate Object-Oriented App Dev</td>
-                            <td>A</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">IST 220</th>
-                            <td>Networking & Telecommunications</td>
-                            <td>A</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">SRA 111</th>
-                            <td>Intro to SRA</td>
-                            <td>A</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">CYBER 100</th>
-                            <td>Computer Systems Literacy</td>
-                            <td>A</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">IST 140</th>
-                            <td>Intro to App Development</td>
-                            <td>A</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </section>
-            <button class="section-toggle" data-target="skills">
-                <span class="icon">−</span> Skills
-            </button>
-            <!--  SKILLS SECTION  -->
-            <section id="skills">
-
-                <h2>Technical Skills</h2>
-
-                <table>
-                    <caption>Cybersecurity Skills and Proficiency Levels</caption>
-                    <thead>
-                        <tr>
-                            <th scope="col">Skill</th>
-                            <th scope="col">Description</th>
-                            <th scope="col">Proficiency</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <th scope="row">Networking</th>
-                            <td>OSI Model, TCP/IP, DNS, DHCP</td>
-                            <td>Intermediate</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">Linux</th>
-                            <td>Command line navigation and scripting</td>
-                            <td>Intermediate</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">HTML5</th>
-                            <td>Semantic markup and accessibility</td>
-                            <td>Beginner</td>
-                        </tr>
-                    </tbody>
-                </table>
-
-                <details>
-                    <summary>Additional Skills</summary>
-                    <ul>
-                        <li>Virtual lab environments</li>
-                        <li>Basic vulnerability analysis</li>
-                        <li>Security documentation</li>
-                    </ul>
-                </details>
-            </section>
-            <button class="section-toggle" data-target="projects">
-                <span class="icon">−</span> Projects
-            </button>
-            <!--  PROJECTS SECTION  -->
-            <section id="projects">
-
-                <h2>Projects & Experience</h2>
-
-                <article>
-                    <h3>Network Security Labs</h3>
-                    <p>
-                        Completed multiple simulated labs focusing on network segmentation, firewall placement,
-                        and IDS/IPS integration. These labs emphasized real-world scenarios rather than theory alone.
-                    </p>
-
-                    <blockquote cite="https://www.schneier.com/essays/archives/1999/10/risks_of_relying_on.html">
-                        "Security is not a product, but a process." – Bruce Schneier
-                    </blockquote>
-                </article>
-
-                <article>
-                    <h3>HTML Portfolio Project</h3>
-                    <p>
-                        Designed and developed this portfolio using HTML5 elements, focusing on an accessible
-                        and clean document. Used elements such as <code>&lt;section&gt;</code>,
-                        <code>&lt;article&gt;</code>, and <code>&lt;aside&gt;</code>.
-                    </p>
-
-                    <p>
-                        Example formula: H<sub>2</sub>O and x<sup>2</sup> + y<sup>2</sup>
-                    </p>
-                </article>
-            </section>
-            <button class="section-toggle" data-target="contact">
-                <span class="icon">−</span> Contact
-            </button>
-            <!--  CONTACT SECTION  -->
-            <section id="contact">
-
-                <h2>Contact Me</h2>
-
-                <form action="#" method="post" aria-label="Contact Form">
-                    <fieldset>
-                        <legend>Send Me a Message</legend>
-
-                        <label for="name">Full Name:</label>
-                        <input type="text" id="name" name="name" required>
-
-                        <label for="email">Email Address:</label>
-                        <input type="email" id="email" name="email" required>
-
-                        <label for="reason">Reason for Contact:</label>
-                        <select id="reason" name="reason">
-                            <option value="general">General Inquiry</option>
-                            <option value="academic">Academic</option>
-                            <option value="professional">Professional</option>
-                        </select>
-
-                        <label for="message">Message:</label>
-                        <textarea id="message" name="message" rows="4"></textarea>
-
-                        <button type="submit">Submit</button>
-                    </fieldset>
-                </form>
-
-                <p>
-                    Email: <a href="mailto:ram7164@psu.edu">ram7164@psu.edu</a><br>
-                    Phone: <a href="tel:+14848949904">+1 (484) 894-9904</a>
-                </p>
-
-            </section>
-
+            </div>
         </div>
-
         <!--  ASIDE  -->
-        <aside>
+        <aside class="col-md-15">
             <h2>Quick Facts</h2>
             <ul>
                 <li>Soccer enthusiast</li>
@@ -437,8 +440,8 @@ Submission Date: February 15, 2026
         <p>Last updated: <time datetime="2026-02-01">February 1, 2026</time></p>
 
     </footer>
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script src="https://netdna.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://netdna.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </body>
 
 </html>
