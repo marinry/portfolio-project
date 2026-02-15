@@ -158,3 +158,19 @@ function startVisualizer() {
         });
     }, 200);
 }
+
+// ===============================
+// JUMBO FADE
+// ===============================
+window.addEventListener("scroll", () => {
+    const jumbo = document.getElementById("introJumbo");
+    if (!jumbo) return;
+
+    if (window.scrollY > 50 && !jumbo.classList.contains("fade-out")) {
+        jumbo.classList.add("fade-out");
+
+        setTimeout(() => {
+            jumbo.style.display = "none";
+        }, 800);
+    }
+});
