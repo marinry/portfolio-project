@@ -1,3 +1,10 @@
+/* Name: Ryan Marin
+Student ID: 914338604
+Course: IST 256 – Programming for the Web
+Assignment: LIVE Portfolio Page Assignment
+Description: Javascript Page
+*/
+
 // ===============================
 // SECTION TOGGLES
 // ===============================
