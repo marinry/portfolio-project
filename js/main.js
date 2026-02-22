@@ -174,3 +174,14 @@ window.addEventListener("scroll", () => {
         }, 800);
     }
 });
+
+// ===============================
+// BACK TO TOP
+// ===============================
+document.getElementById("backToTop").addEventListener("click", () => {
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+});
+

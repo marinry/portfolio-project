@@ -555,3 +555,9 @@ form button {
 .section-toggle:hover {
     background-color: #4a2f1b;
 }
+
+#backToTop {
+    display: block;
+    margin: 50px auto;
+    text-align: center;
+}
